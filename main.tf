@@ -1,6 +1,4 @@
-provider "aws" {
-    region     = "us-east-1"
-}
+provider "aws" {}
 
 resource "aws_instance" "web-app" {
   ami             = "ami-00068cd7555f543d5"
