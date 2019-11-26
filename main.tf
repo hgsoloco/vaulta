@@ -1,4 +1,7 @@
-provider "aws" {}
+provider "aws" {
+  access_key = "xxx"
+  secret_key = "xxx"
+  region     = "us-east-1"}
 
 resource "aws_instance" "web-app" {
   ami             = "ami-00068cd7555f543d5"
