@@ -5,7 +5,7 @@ node {
     sh 'pwd'
     sh 'ls'
     sh 'pwd'
-    properties = readProperties file: 'scripts/jenkins-pipelines/branch-specific.properties'
+    properties = readProperties file: 'pipeline/vars.properties'
     echo "Running build ${JOB_NAME}"
 
   }
