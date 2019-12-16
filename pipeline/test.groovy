@@ -1,4 +1,13 @@
 node {
-    load "pipeline/vars.properties"
-    echo "${environment}"
+    pipeline {
+    agent any
+    stages {
+        stage('build') {
+            steps {
+                  load "pipeline/vars.properties"
+                  echo "${environment}"
+            }
+        }
+    }
+}
 }
