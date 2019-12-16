@@ -1,0 +1,48 @@
+node {
+  stage('Preparation') {
+    git 'https://github.com/hgsoloco/vaulta.git'
+  }
+  stage('Build') {
+      
+    def nonprodsecrets = [
+        [path: 'aws/creds/s3-ec2', engineVersion: 1, secretValues: [
+            [envVar: 'akey', vaultKey: 'access_key'],
+            [envVar: 'asecret', vaultKey: 'secret_key']]]
+    ]
+
+    def nonprodconfiguration = [vaultUrl: 'http://104.197.157.237:8200',
+                        vaultCredentialId: 'genny',
+                        engineVersion: 1]
+    
+    def prodsecrets = [
+        [path: 'aws2/creds/prodaccount', engineVersion: 1, secretValues: [
+            [envVar: 'akey', vaultKey: 'access_key'],
+            [envVar: 'asecret', vaultKey: 'secret_key']]]
+    ]
+
+    def prodconfiguration = [vaultUrl: 'http://104.197.157.237:8200',
+                        vaultCredentialId: 'james',
+                        engineVersion: 1]  
+
+    echo "Environment Deployment to ${params.environment}"
+    if ("${params.environment}" == 'nonprod') {
+        withVault([configuration: nonprodconfiguration, vaultSecrets: nonprodsecrets]) {
+            sh 'chmod +x ./delay-vault-aws.sh && ./delay-vault-aws.sh'
+            sh 'terraform init'
+            sh 'terraform plan -var secret_key=$asecret -var access_key=$akey'
+            sh 'terraform apply -var secret_key=$asecret -var access_key=$akey -auto-approve'
+            sh 'terraform destroy -var secret_key=$asecret -var access_key=$akey -force'
+   }
+    }
+    if ("${params.environment}" == 'prod') {
+    withVault([configuration: prodconfiguration, vaultSecrets: prodsecrets]) {
+            sh 'chmod +x ./delay-vault-aws.sh && ./delay-vault-aws.sh'
+            sh 'terraform init'
+            sh 'terraform plan -var secret_key=$asecret -var access_key=$akey'
+            sh 'terraform apply -var secret_key=$asecret -var access_key=$akey -auto-approve'
+            sh 'terraform destroy -var secret_key=$asecret -var access_key=$akey -force'
+   }
+    }
+    
+  }
+}
