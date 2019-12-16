@@ -6,7 +6,7 @@ node {
     sh 'ls'
     sh 'pwd'
     properties = readProperties file: 'pipeline/vars.properties'
-    echo "Running build ${environment}"
+    echo "Running build ${properties.environment}"
 
   }
 
