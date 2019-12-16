@@ -1,13 +1,10 @@
 node {
-  load "pipeline/vars.properties"
-  echo "${environment}"
+
   stage('Preparation') {
-    git 'https://github.com/hgsoloco/vaulta.git'
+    sh 'pwd'
+    properties = readProperties file: 'scripts/jenkins-pipelines/branch-specific.properties'
+    echo "Running build ${JOB_NAME}"
 
   }
-  stage('Build') {
-  echo "hi"
-    
-    
-  }
+
 }
