@@ -20,8 +20,7 @@ node {
             [envVar: 'asecret', vaultKey: 'secret_key']]]
     ]
 
-    def prodconfiguration = [vaultUrl: 'http://35.232.41.214
-:8200',
+    def prodconfiguration = [vaultUrl: 'http://35.232.41.214:8200',
                         vaultCredentialId: 'james',
                         engineVersion: 1]  
 
