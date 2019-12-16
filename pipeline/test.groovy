@@ -1,4 +1,4 @@
 node {
-    load "vars.properties"
+    load "pipeline/vars.properties"
     echo "${environment}"
 }
