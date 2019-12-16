@@ -3,6 +3,9 @@ node {
     git 'https://github.com/hgsoloco/vaulta.git'
   }
   stage('Build') {
+
+    def props = readProperties  file:'vars.properties'
+    def environment = props['environment']
       
     def nonprodsecrets = [
         [path: 'aws/creds/s3-ec2', engineVersion: 1, secretValues: [
@@ -25,7 +28,7 @@ node {
                         engineVersion: 1]  
 
     echo "Environment Deployment to ${params.environment}"
-    if ("${params.environment}" == 'nonprod') {
+    if ("${environment}" == 'nonprod') {
         withVault([configuration: nonprodconfiguration, vaultSecrets: nonprodsecrets]) {
             sh 'chmod +x ./delay-vault-aws.sh && ./delay-vault-aws.sh'
             sh 'terraform init'
@@ -34,7 +37,7 @@ node {
             sh 'terraform destroy -var secret_key=$asecret -var access_key=$akey -force'
    }
     }
-    if ("${params.environment}" == 'prod') {
+    if ("${environment}" == 'prod') {
     withVault([configuration: prodconfiguration, vaultSecrets: prodsecrets]) {
             sh 'chmod +x ./delay-vault-aws.sh && ./delay-vault-aws.sh'
             sh 'terraform init'
