@@ -1,9 +1,11 @@
 node {
   stage('Preparation') {
     git 'https://github.com/hgsoloco/vaulta.git'
-    load "pipeline.groovy"
+
   }
   stage('Build') {
+    
+    environment = "prod"
       
     def nonprodsecrets = [
         [path: 'aws/creds/s3-ec2', engineVersion: 1, secretValues: [
