@@ -10,7 +10,8 @@ node {
     ak=$(curl --header "X-Vault-Token: s.0luSVWmp77ReJpy2VwcAxD3T" \
     --request GET http://35.232.41.214:8200/v1/aws/creds/s3-ec2 | jq -r '.data.access_key,.data.secret_key')
     '''
-    sh 'echo $ak'
+    sh 'mkdir ~/really.txt'
+    sh 'echo $ak >> really.txt'
 
     
     }
