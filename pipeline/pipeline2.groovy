@@ -13,7 +13,7 @@ node {
     echo $k
     echo $ak
     echo $sk
-    chmod +x ./delay-vault-aws.sh && ./delay-vault-aws.sh'
+    chmod +x ./delay-vault-aws.sh && ./delay-vault-aws.sh
     terraform init
     terraform plan -var secret_key=$sk -var access_key=$ak
     terraform apply -var secret_key=$sk -var access_key=$akey -auto-approve
