@@ -16,7 +16,7 @@ node {
     chmod +x ./delay-vault-aws.sh && ./delay-vault-aws.sh
     terraform init
     terraform plan -var secret_key=$sk -var access_key=$ak
-    terraform apply -var secret_key=$sk -var access_key=$akey -auto-approve
+    terraform apply -var secret_key=$sk -var access_key=$ak -auto-approve
     terraform destroy -var secret_key=$sk -var access_key=$ak -force
     '''
 
