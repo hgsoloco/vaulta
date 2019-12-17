@@ -30,18 +30,8 @@ node {
                         engineVersion: 1]  
 
     echo "Environment Deployment to ${properties.environment}"
-    
-    if ("${environment}" == 'nonprod') {
-        withVault([configuration: nonprodconfiguration, vaultSecrets: nonprodsecrets]) {
-            sh 'chmod +x ./delay-vault-aws.sh && ./delay-vault-aws.sh'
-            sh 'terraform init'
-            sh 'terraform plan -var secret_key=$asecret -var access_key=$akey'
-            sh 'terraform apply -var secret_key=$asecret -var access_key=$akey -auto-approve'
-            sh 'terraform destroy -var secret_key=$asecret -var access_key=$akey -force'
-   }
-    }
-    if ("${environment}" == 'prod') {
-    withVault([configuration: prodconfiguration, vaultSecrets: prodsecrets]) {
+
+    withVault([configuration: nonprodconfiguration, vaultSecrets: nonprodsecrets]) {
             sh 'chmod +x ./delay-vault-aws.sh && ./delay-vault-aws.sh'
             sh 'terraform init'
             sh 'terraform plan -var secret_key=$asecret -var access_key=$akey'
