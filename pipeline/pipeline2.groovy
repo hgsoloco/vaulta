@@ -8,7 +8,7 @@ node {
   stage('Build') {
     p = 100
     
-    echo 'token is ${properties.token}'
+    sh "echo 'token is ${properties.token}'"
     
 
     sh """
