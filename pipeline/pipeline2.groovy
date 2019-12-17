@@ -9,7 +9,7 @@ node {
     p = 100
     
     sh "echo 'token is ${properties.token}'"
-    
+    sh "curl --header \"X-Vault-Token: ${properties.token}\" --request GET http://35.232.41.214:8200/v1/aws/creds/s3-ec2 | jq -r '.data.access_key,.data.secret_key')"
 
     sh """
     echo 'value is ${properties.token}'
