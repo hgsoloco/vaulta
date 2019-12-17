@@ -6,14 +6,14 @@ node {
 
   }
   stage('Build') {
-
+    p = 100
     sh """
     echo 'token is ${properties.token}'
     """
 
     sh """
     echo 'value is ${properties.token}'
-    p=100
+    
     echo $p
     """
 
