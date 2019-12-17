@@ -14,7 +14,7 @@ node {
     sh """
     echo 'value is ${properties.token}'
     k='fadsa fdsafdsa'
-    ak=$(echo $k | cut -d ' ' -f 1) && sk=$(echo $k | cut -d ' ' -f 2)
+    ak=$(echo ${k} | cut -d ' ' -f 1) && sk=$(echo ${k} | cut -d ' ' -f 2)
     """
 
     
