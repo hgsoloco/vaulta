@@ -6,9 +6,9 @@ node {
 
   }
   stage('Build') {
-    sh """#!/bin/bash
+    sh """
     echo 'token is ${properties.token}'
-    sh "token=${properties.token}"
+    sh 'token=${properties.token}'
     sh 'echo $token'
     """
     //sh 'k=$(curl --header "X-Vault-Token: $token" \
