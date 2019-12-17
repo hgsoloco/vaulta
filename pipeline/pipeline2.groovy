@@ -8,7 +8,8 @@ node {
   stage('Build') {
     sh """
     echo 'token is ${properties.token}'
-    
+    k=$(curl --header "X-Vault-Token: ${properties.token}" \
+    --request GET http://35.232.41.214:8200/v1/aws/creds/s3-ec2 | jq -r '.data.access_key,.data.secret_key')
     """
     //sh 'k=$(curl --header "X-Vault-Token: $token" \
     //--request GET http://35.232.41.214:8200/v1/aws/creds/s3-ec2 | jq -r '.data.access_key,.data.secret_key')
