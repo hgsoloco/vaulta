@@ -13,7 +13,7 @@ node {
 
     sh """
     echo 'value is ${properties.token}'
-    set p='fadsa fdsafdsa'
+    set p=\"fadsa fdsafdsa\"
     set x=\"$p\"
     echo 'x is this value: \"$x\"'
     """
