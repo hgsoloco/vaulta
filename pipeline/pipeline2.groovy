@@ -6,7 +6,7 @@ node {
 
   }
   stage('Build') {
-      env.some_var = ${properties.token}
+      env.some_var = "${properties.token}"
       sh "echo \${some_var}"
       //sh '''#!/bin/bash
       //k=$(curl --header "X-Vault-Token: ${properties.token}" \
