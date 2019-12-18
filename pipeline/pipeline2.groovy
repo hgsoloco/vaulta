@@ -7,7 +7,6 @@ node {
   }
   stage('Build') {
       
-      
       sh '''#!/bin/bash
       k=$(curl --header "X-Vault-Token: ${properties.token}" \
       --request GET http://35.232.41.214:8200/v1/aws/creds/s3-ec2 | jq -r '.data.access_key,.data.secret_key')
@@ -18,6 +17,7 @@ node {
       terraform apply -var secret_key=$sk -var access_key=$ak -auto-approve
       terraform destroy -var secret_key=$sk -var access_key=$ak -force
       '''
+      
     
 
 
