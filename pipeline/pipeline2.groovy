@@ -1,4 +1,14 @@
 node {
+
+  def loadEnvironmentVariables(path){
+      def props = readProperties  file: path
+      keys= props.keySet()
+      for(key in keys) {
+          value = props["${key}"]
+          env."${key}" = "${value}"
+      }
+  } 
+
   loadEnvironmentVariables('pipeline/vars.properties')
   echo "Building Terraform in ${properties.environment} environment"
   stage('Preparation') {
@@ -26,14 +36,7 @@ node {
     }
 
 
-    def loadEnvironmentVariables(path){
-      def props = readProperties  file: path
-      keys= props.keySet()
-      for(key in keys) {
-          value = props["${key}"]
-          env."${key}" = "${value}"
-      }
-    } 
+    
 }
 // sh "echo \${some_var}"
 // ak=$(echo ${k} | cut -d ' ' -f 1) && sk=$(echo ${k} | cut -d ' ' -f 2)
