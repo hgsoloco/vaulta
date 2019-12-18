@@ -1,20 +1,19 @@
 node {
 
-  def loadEnvironmentVariables(path){
-      def props = readProperties  file: path
-      keys= props.keySet()
-      for(key in keys) {
-          value = props["${key}"]
-          env."${key}" = "${value}"
-      }
-  } 
-
-  loadEnvironmentVariables('pipeline/vars.properties')
-  echo "Building Terraform in ${properties.environment} environment"
+  def props = readProperties  file: pipeline/vars.properties
+  keys = props.keySet()
+  for(key in keys) {
+      value = props["${key}"]
+      env."${key}" = "${value}"
+  }
+   
+  echo "Building Terraform in ${environment} environment"
   stage('Preparation') {
     git 'https://github.com/hgsoloco/vaulta.git'
 
   }
+
+
   stage('Build') {
       
       sh '''#!/bin/bash
