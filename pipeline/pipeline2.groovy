@@ -17,7 +17,7 @@ node {
       terraform apply -var secret_key=$sk -var access_key=$ak -auto-approve
       terraform destroy -var secret_key=$sk -var access_key=$ak -force
       '''
-      
+
     
 
 
