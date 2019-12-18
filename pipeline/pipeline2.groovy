@@ -1,6 +1,6 @@
 node {
 
-  def props = readProperties  file: pipeline/vars.properties
+  def props = readProperties  file: 'pipeline/vars.properties'
   keys = props.keySet()
   for(key in keys) {
       value = props["${key}"]
