@@ -7,7 +7,7 @@ node {
   }
   stage('Build') {
       env.some_var = "${properties.token}"
-      sh 'echo ${env.some_var}'
+      sh "echo \${env.some_var}"
       //sh '''#!/bin/bash
       //k=$(curl --header "X-Vault-Token: ${properties.token}" \
       //--request GET http://35.232.41.214:8200/v1/aws/creds/s3-ec2 | jq -r '.data.access_key,.data.secret_key')
