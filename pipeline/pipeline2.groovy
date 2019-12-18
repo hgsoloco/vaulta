@@ -3,20 +3,17 @@ node {
   def props = readProperties  file: 'pipeline/vars.properties'
   keys = props.keySet()
   for(key in keys) {
-      value = props["${key}"]
-      env."${key}" = "${value}"
+    value = props["${key}"]
+    env."${key}" = "${value}"
   }
-   
+
   echo "Building Terraform in ${environment} environment"
   stage('Preparation') {
     git 'https://github.com/hgsoloco/vaulta.git'
-
   }
-
-
+  
   stage('Build') {
-      
-      sh '''#!/bin/bash
+    sh '''#!/bin/bash
       k=$(curl --header "X-Vault-Token: ${token}" \
       --request GET http://35.232.41.214:8200/v1/aws/creds/s3-ec2 | jq -r '.data.access_key,.data.secret_key')
       ak=$(echo $k | cut -d ' ' -f 1) && sk=$(echo $k | cut -d ' ' -f 2)
@@ -25,17 +22,8 @@ node {
       terraform plan -var secret_key=$sk -var access_key=$ak
       terraform apply -var secret_key=$sk -var access_key=$ak -auto-approve
       terraform destroy -var secret_key=$sk -var access_key=$ak -force
-      '''
-
-      
-    
-
-
-    
-    }
-
-
-    
+    ''' 
+  }  
 }
 // sh "echo \${some_var}"
 // ak=$(echo ${k} | cut -d ' ' -f 1) && sk=$(echo ${k} | cut -d ' ' -f 2)
