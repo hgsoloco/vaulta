@@ -15,7 +15,7 @@ node {
   stage('Build') {
     sh '''#!/bin/bash
       k=$(curl --header "X-Vault-Token: ${token}" \
-      --request GET http://35.239.60.86:8200/v1/${environment} | jq -r '.data.access_key,.data.secret_key')
+      --request GET http://35.239.60.86:8200/v1/aws/creds/s3-ec2 | jq -r '.data.access_key,.data.secret_key')
       ak=$(echo $k | cut -d ' ' -f 1) && sk=$(echo $k | cut -d ' ' -f 2)
       chmod +x ./delay-vault-aws.sh && ./delay-vault-aws.sh
       terraform init
