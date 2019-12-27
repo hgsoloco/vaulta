@@ -59,4 +59,4 @@ node {
 //      terraform destroy -var secret_key=$sk -var access_key=$ak -force
 //    '''
 //  }  
-//testwithpolling
+//testwithpolling2
