@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-sleep 10
+sleep 20
 echo '{ "region": "us-east-1" }'
