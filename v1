@@ -1,6 +1,6 @@
-<mxfile modified="2021-10-12T16:05:02.541Z" host="app.diagrams.net" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" etag="jrRFToz1lpptV9wrTzGD" version="15.4.3" type="github">
+<mxfile modified="2021-10-12T17:33:34.884Z" host="app.diagrams.net" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" etag="sGpZAeqM3Oj4SrD6gunB" version="15.4.3" type="github">
   <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
-    <mxGraphModel dx="1426" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1425" dy="801" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -30,7 +30,7 @@
         <mxCell id="Bm9dChhNE6_kYrQnx7Yv-36" value="Availability Zone 2. " style="rounded=1;arcSize=10;dashed=1;strokeColor=#F59D56;fillColor=none;gradientColor=none;dashPattern=8 4;strokeWidth=2;verticalAlign=middle;fontColor=#FF9933;labelPosition=left;verticalLabelPosition=middle;align=right;" parent="1" vertex="1">
           <mxGeometry x="190" y="354" width="851" height="199.5" as="geometry" />
         </mxCell>
-        <mxCell id="Bm9dChhNE6_kYrQnx7Yv-38" value="Private subnet" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#147EBA;fillColor=#E6F2F8;verticalAlign=top;align=left;spacingLeft=30;fontColor=#147EBA;dashed=0;" parent="1" vertex="1">
+        <mxCell id="Bm9dChhNE6_kYrQnx7Yv-38" value="Private subnet" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#147EBA;fillColor=#E6F2F8;verticalAlign=top;align=center;spacingLeft=30;fontColor=#147EBA;dashed=0;labelPosition=center;verticalLabelPosition=bottom;" parent="1" vertex="1">
           <mxGeometry x="351" y="388.75" width="660" height="130" as="geometry" />
         </mxCell>
         <mxCell id="Bm9dChhNE6_kYrQnx7Yv-34" value="Frontend Services" style="fillColor=none;strokeColor=#5A6C86;dashed=1;verticalAlign=bottom;fontStyle=0;fontColor=#5A6C86;labelPosition=center;verticalLabelPosition=top;align=center;" parent="1" vertex="1">
