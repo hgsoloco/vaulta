@@ -1,6 +1,6 @@
-<mxfile modified="2021-10-20T14:28:06.668Z" host="app.diagrams.net" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" etag="2xeEUxLO2AU6PCSSwJjZ" version="15.4.3" type="github">
+<mxfile modified="2021-10-25T18:03:17.628Z" host="app.diagrams.net" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" etag="_K9TICbG0ybHLLgjrdEc" version="15.4.3" type="github">
   <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
-    <mxGraphModel dx="1426" dy="744" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="897" dy="506" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -123,7 +123,7 @@
         <mxCell id="rmhLXEgtY19B_mHbn0HF-55" value="4c" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=2;fontFamily=Tahoma;spacingBottom=4;spacingRight=2;strokeColor=#d79b00;verticalAlign=bottom;labelBackgroundColor=none;fillColor=#FF9933;" vertex="1" parent="1">
           <mxGeometry x="823" y="551" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="rmhLXEgtY19B_mHbn0HF-56" value="&amp;nbsp; &amp;nbsp; &amp;nbsp;Image Registry" style="outlineConnect=0;dashed=0;verticalLabelPosition=middle;verticalAlign=middle;align=left;html=1;shape=mxgraph.aws3.ecr_registry;fillColor=#F58534;gradientColor=none;labelPosition=right;" vertex="1" parent="1">
+        <mxCell id="rmhLXEgtY19B_mHbn0HF-56" value="&amp;nbsp; &amp;nbsp; Container Registry" style="outlineConnect=0;dashed=0;verticalLabelPosition=middle;verticalAlign=middle;align=left;html=1;shape=mxgraph.aws3.ecr_registry;fillColor=#F58534;gradientColor=none;labelPosition=right;" vertex="1" parent="1">
           <mxGeometry x="720" y="402" width="57" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rmhLXEgtY19B_mHbn0HF-63" value="&lt;font color=&quot;#00994d&quot;&gt;/green&lt;/font&gt;" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=default;imageAspect=0;aspect=fixed;image=https://cdn0.iconfinder.com/data/icons/zondicons/20/checkmark-128.png;labelBorderColor=none;fillColor=#FF9933;fontColor=#FF9933;imageBackground=default;fontStyle=1" vertex="1" parent="1">
