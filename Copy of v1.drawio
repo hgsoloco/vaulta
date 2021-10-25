@@ -1,6 +1,6 @@
-<mxfile modified="2021-10-20T15:36:39.723Z" host="app.diagrams.net" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" etag="rVZHSz1tTbDS_xb8CDcb" version="15.5.6" type="github">
+<mxfile modified="2021-10-25T14:16:46.286Z" host="app.diagrams.net" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" etag="AEP8imbSK4_tCGGNonD8" version="15.5.6" type="github">
   <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
-    <mxGraphModel dx="1426" dy="744" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1426" dy="688" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -188,7 +188,7 @@
         <mxCell id="MH6_EnVXU-AyahLenh14-88" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=1;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="MH6_EnVXU-AyahLenh14-84" vertex="1">
           <mxGeometry y="60" width="200" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="MH6_EnVXU-AyahLenh14-89" value="8080" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;" parent="MH6_EnVXU-AyahLenh14-88" vertex="1">
+        <mxCell id="MH6_EnVXU-AyahLenh14-89" value="443" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;" parent="MH6_EnVXU-AyahLenh14-88" vertex="1">
           <mxGeometry width="99" height="30" as="geometry">
             <mxRectangle width="99" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -213,7 +213,7 @@
         <mxCell id="dCxsDbQLqpyF0vaoJJsp-3" value="Load Balancer&lt;br&gt;Interface" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.elastic_network_interface;fillColor=#F58536;gradientColor=none;" vertex="1" parent="MH6_EnVXU-AyahLenh14-1">
           <mxGeometry x="35.5" y="57" width="69" height="72" as="geometry" />
         </mxCell>
-        <mxCell id="MH6_EnVXU-AyahLenh14-106" value="" style="endArrow=classic;html=1;rounded=0;fontColor=#FF0000;curved=1;exitX=0.913;exitY=0.494;exitDx=0;exitDy=0;exitPerimeter=0;spacing=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" edge="1">
+        <mxCell id="MH6_EnVXU-AyahLenh14-106" value="&lt;font color=&quot;#000000&quot;&gt;HTTPS&lt;/font&gt;" style="endArrow=classic;html=1;rounded=0;fontColor=#FF0000;curved=1;exitX=0.913;exitY=0.494;exitDx=0;exitDy=0;exitPerimeter=0;spacing=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="600.0799999999999" y="330.8899999999999" as="sourcePoint" />
             <mxPoint x="646" y="329.8108057697091" as="targetPoint" />
@@ -221,6 +221,15 @@
         </mxCell>
         <mxCell id="MH6_EnVXU-AyahLenh14-114" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#FF0000;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" source="Bm9dChhNE6_kYrQnx7Yv-35" target="Bm9dChhNE6_kYrQnx7Yv-37" edge="1">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dCxsDbQLqpyF0vaoJJsp-5" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" edge="1" parent="1" source="MH6_EnVXU-AyahLenh14-115" target="dCxsDbQLqpyF0vaoJJsp-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="247" />
+              <mxPoint x="80" y="303" />
+              <mxPoint x="115" y="303" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="MH6_EnVXU-AyahLenh14-115" value="&lt;font color=&quot;#000000&quot;&gt;Internet Gateway&lt;/font&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.internet_gateway;fillColor=#F58534;gradientColor=none;labelBorderColor=none;fontColor=#FF0000;" parent="1" vertex="1">
           <mxGeometry x="112" y="210.75" width="69" height="72" as="geometry" />
