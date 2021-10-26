@@ -1,11 +1,11 @@
-<mxfile modified="2021-10-26T14:28:17.988Z" host="app.diagrams.net" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" etag="zCry8jYyZq-wOFO1x37K" version="15.4.3" type="github">
+<mxfile modified="2021-10-26T14:59:13.388Z" host="app.diagrams.net" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" etag="mxVT4Khc73nc21dENHmb" version="15.4.3" type="github">
   <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
     <mxGraphModel dx="1425" dy="687" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="rmhLXEgtY19B_mHbn0HF-1" value="" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;strokeColor=#232F3E;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#232F3E;dashed=0;" vertex="1" parent="1">
-          <mxGeometry x="42" y="100" width="998" height="580" as="geometry" />
+          <mxGeometry x="40" y="50" width="990" height="640" as="geometry" />
         </mxCell>
         <mxCell id="rmhLXEgtY19B_mHbn0HF-2" value="Code Pipeline" style="fillColor=none;strokeColor=#5A6C86;dashed=1;verticalAlign=top;fontStyle=0;fontColor=#5A6C86;labelPosition=center;verticalLabelPosition=bottom;align=center;" vertex="1" parent="1">
           <mxGeometry x="76" y="210" width="170" height="430" as="geometry" />
@@ -158,6 +158,9 @@
         </mxCell>
         <mxCell id="rmhLXEgtY19B_mHbn0HF-84" value="5" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=2;fontFamily=Tahoma;spacingBottom=4;spacingRight=2;strokeColor=#d79b00;verticalAlign=bottom;labelBackgroundColor=none;fillColor=#FF9933;" vertex="1" parent="1">
           <mxGeometry x="970" y="531" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="rmhLXEgtY19B_mHbn0HF-85" value="US East 1 (N.Virginia)" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_region;strokeColor=#879196;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#879196;dashed=1;labelBackgroundColor=none;labelBorderColor=none;" vertex="1" parent="1">
+          <mxGeometry x="50" y="80" width="970" height="590" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
